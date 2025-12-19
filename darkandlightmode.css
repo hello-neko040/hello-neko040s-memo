@@ -1,0 +1,12 @@
+:root {
+  color-scheme: light dark; /* カラースキームとしてライトモード用のlightとダークモード用のdarkを使う */
+  --text-color: #222; /* ライトモードの文字色 */
+  --background-color: #f4f4f4; /* ライトモードの背景色 */
+}
+
+body {
+  /* light-dark(A, B) とすると、ライトモードではA、ダークモードではBの色が使われる */
+  /* ライトモードとダークモードで文字色と背景色が入れ替わる */
+  color: light-dark(var(--text-color), var(--background-color));
+  background-color: light-dark(var(--background-color), var(--text-color));
+}
